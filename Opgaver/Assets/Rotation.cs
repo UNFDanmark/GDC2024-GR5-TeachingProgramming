@@ -2,19 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Vlad : MonoBehaviour
+public class Rotation : MonoBehaviour
 {
-    public int Cooldown = 5;
+    private Transform transform;
+    
     // Start is called before the first frame update
     void Start()
-    {
-        print("hej, jeg er ond");
+    { 
+        transform = GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        transform.Rotate(0, Input.GetAxisRaw("TurnAround") * 4, 0);
         
     }
 }
-    
