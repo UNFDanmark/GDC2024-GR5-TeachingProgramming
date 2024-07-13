@@ -20,5 +20,6 @@ public class BingBong : MonoBehaviour
         move.x = Input.GetAxisRaw("Horizontal") * speed;
         move.z = Input.GetAxisRaw("Vertical") * speed;
         rigidbody.velocity = move;
+        
     }
 }
