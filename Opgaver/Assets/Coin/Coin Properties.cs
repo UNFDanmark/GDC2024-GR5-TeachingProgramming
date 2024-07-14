@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CoinProperties : MonoBehaviour
 {
+    
     private Transform transform; 
     // Start is called before the first frame update
     void Start()
@@ -14,8 +15,15 @@ public class CoinProperties : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Transform.Rotate(0, 2, 0);
+        transform.Rotate(2f, 0f, 0f); //transform.up
         //Få denne til at forsvinde når den collider med min character
-        OnTriggerEnter(Collider other)
+
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

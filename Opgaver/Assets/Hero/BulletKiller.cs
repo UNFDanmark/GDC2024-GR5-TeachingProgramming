@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class BulletKiller : MonoBehaviour
 {
+    public float deathTimer;
+    
+    
     
     // Start is called before the first frame update
     void Start()
@@ -14,7 +17,7 @@ public class BulletKiller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Destroy(gameObject, deathTimer);
     }
 }
 //please dø

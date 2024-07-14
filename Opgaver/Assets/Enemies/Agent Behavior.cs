@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class AgentBehavior : MonoBehaviour
 {
+    public 
     private Transform playerTransform; 
     private NavMeshAgent agent; 
     // Start is called before the first frame update
@@ -21,4 +22,6 @@ public class AgentBehavior : MonoBehaviour
         agent.destination = playerTransform.position;
         
     }
+    
+    
 }

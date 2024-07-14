@@ -31,7 +31,7 @@ public class Spawner_Script : MonoBehaviour
             float xSpawn = Random.Range(xMin, xMax);
             float zSpawn = Random.Range(zMin, zMax);
             Vector3 spawnPoint = new Vector3(xSpawn, transform.position.y, zSpawn);
-            Instantiate(enemyPrefab, spawnPoint, quaternion.identity);
+            Instantiate(enemyPrefab, spawnPoint, enemyPrefab.transform.rotation);
             leftovercooldown = SpawnCooldown;
             
         }

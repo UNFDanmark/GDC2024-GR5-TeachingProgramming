@@ -6,6 +6,9 @@ using UnityEngine;
 public class Vlad : MonoBehaviour
 {
     public int Cooldown = 5;
+    public BoxCollider skeletonAttackHitbox;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,20 @@ public class Vlad : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            
+
+            
+        }
+
+
+
     }
 }
     
